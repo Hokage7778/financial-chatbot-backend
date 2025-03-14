@@ -64,16 +64,6 @@ app.use((err, req, res, next) => {
 app.use('/api/financial', financialRoutes);
 app.use('/api/psychometric', psychometricRoutes);
 
-// Serve static assets in production
-if (process.env.NODE_ENV === 'production') {
-  // Set static folder
-  app.use(express.static(path.join(__dirname, '../../frontend/dist')));
-
-  app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, '../../frontend/dist', 'index.html'));
-  });
-}
-
 // Catch 404 and forward to error handler
 app.use((req, res, next) => {
   console.log('404 Not Found:', req.originalUrl);
