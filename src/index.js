@@ -28,7 +28,8 @@ app.use(morgan('dev')); // Logging
 app.use(cors({
   origin: process.env.CORS_ORIGIN || [
     'http://localhost:5173',
-    'https://financial-chatbot-app.netlify.app', // Replace with your actual Netlify domain
+    'https://financial-chatbot-app.netlify.app',
+    'https://cosmic-hummingbird-6314a4.netlify.app', // Add your actual Netlify domain
     /\.netlify\.app$/, // Allow all Netlify subdomains
     /\.netlify\.live$/ // Allow Netlify Live domains for previews
   ],
